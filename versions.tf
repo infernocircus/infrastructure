@@ -1,11 +1,13 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.28.0"
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = "~> 2.0"
+    }
+
+    namecheap = {
+      source = "namecheap/namecheap"
+      version = ">= 2.0.0"
     }
 
     random = {
@@ -14,5 +16,5 @@ terraform {
     }
   }
 
-  required_version = ">= 0.14.0"
+  required_version = ">= 1.7.3"
 }

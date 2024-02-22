@@ -1,18 +1,19 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+variable "do_token" {
+  type        = string
+  description = "DigitalOcean access token"
 }
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "namecheap_user_name" {
+  type        = string
+  description = "Namecheap User Name"
 }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+variable "namecheap_api_user" {
+  type        = string
+  description = "Namecheap API User"
 }
 
+variable "namecheap_api_key" {
+  type        = string
+  description = "Namecheap API Key"
+}
