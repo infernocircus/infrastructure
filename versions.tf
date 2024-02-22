@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "infernocircus"
+
+    workspaces {
+      name = "infrastructure"
+    }
+  }
+  
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
