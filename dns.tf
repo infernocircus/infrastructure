@@ -1,15 +1,20 @@
-resource "namecheap_domain_records" "infernocircus-club" {
-  domain = "infernocircus.club"
-  mode = "OVERWRITE"
-  nameservers = [
-    "ns1.digitalocean.com",
-    "ns2.digitalocean.com",
-    "ns3.digitalocean.com",
-  ]
+locals {
+  domain_infernocircus_club = "infernocircus.club"
 }
 
+# resource "namecheap_domain_records" "infernocircus-club" {
+#   domain = local.domain_infernocircus_club
+#   mode = "OVERWRITE"
+#   nameservers = [
+#     "ns1.digitalocean.com",
+#     "ns2.digitalocean.com",
+#     "ns3.digitalocean.com",
+#   ]
+# }
+
 resource "digitalocean_domain" "infernocircus-club" {
-  name       = namecheap_domain_records.infernocircus-club.domain
+  # name = namecheap_domain_records.infernocircus-club.domain
+  name = local.domain_infernocircus_club
 }
 
 resource "digitalocean_record" "mc-infernocircus-club" {
