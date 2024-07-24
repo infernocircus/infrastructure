@@ -1,7 +1,7 @@
 resource "digitalocean_kubernetes_cluster" "main-cluster" {
   name    = "main-cluster"
   region  = "nyc1"
-  version = "1.22.8-do.1"
+  version = "1.30.2-do.0"
 
   node_pool {
     name       = "base-infrastructure-pool"
