@@ -27,12 +27,12 @@ resource "digitalocean_record" "mc-infernocircus-club" {
   value = local.minecraft_ip
 }
 
-# resource "digitalocean_record" "mc-infernocircus-club-minecraft-tcp-srv" {
-#   domain = digitalocean_domain.infernocircus-club.id
-#   type = "SRV"
-#   name = "_minecraft._tcp.${local.minecraft_subdomain}"
-#   value = digitalocean_record.mc-infernocircus-club.fqdn
-#   port = local.minecraft_port
-#   priority = 0
-#   weight = 5
-# }
+resource "digitalocean_record" "mc-infernocircus-club-minecraft-tcp-srv" {
+  domain = digitalocean_domain.infernocircus-club.id
+  type = "SRV"
+  name = "_minecraft._tcp.${local.minecraft_subdomain}"
+  value = digitalocean_record.mc-infernocircus-club.fqdn
+  port = local.minecraft_port
+  priority = 0
+  weight = 5
+}
