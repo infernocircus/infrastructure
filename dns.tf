@@ -28,7 +28,7 @@ resource "digitalocean_record" "mc-infernocircus-club-minecraft-tcp-srv" {
   domain = digitalocean_domain.infernocircus-club.id
   type = "SRV"
   name = "_minecraft._tcp.mc"
-  value = digitalocean_record.mc-infernocircus-club.fqdn
+  value = digitalocean_record.mc-infernocircus-club.name
   port = 31417
   priority = 0
   weight = 5
