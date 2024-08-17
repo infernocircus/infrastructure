@@ -1,8 +1,8 @@
 locals {
   infernocircus_club_domain = "infernocircus.club"
   minecraft_subdomain = "mc"
-  minecraft_ip = "8.48.32.35"
-  minecraft_port = 31417
+  minecraft_ip = "8.48.32.25"
+  minecraft_port = 13160
 }
 
 # resource "namecheap_domain_records" "infernocircus-club" {
